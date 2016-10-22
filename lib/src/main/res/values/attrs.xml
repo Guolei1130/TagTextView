@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TagTextView">
+        <attr name="flag_char" format="string" />
+        <attr name="tag_layout" format="integer" />
+    </declare-styleable>
+</resources>
