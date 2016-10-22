@@ -75,6 +75,11 @@ public class TagTextView extends TextView {
     public void render(){
         TextPaint textPaint = getPaint();
         float hasWidth = getMeasuredWidth() * getMaxLines();
+
+        if (getMaxLines() == Integer.MAX_VALUE || getMaxLines() == -1){
+            hasWidth = Float.MAX_VALUE;
+        }
+
         // 计算Tag开始的位置
         String text = getText().toString();
         mStart = text.lastIndexOf(mFlagChar);
