@@ -5,6 +5,22 @@ TextView with tag
 
 * 基本效果实现
 
+_ _ _ 
+
+### 使用方法
+
+```
+    <com.tagtextview.lib.TagTextView
+        android:id="@+id/tagText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我来测试测试!@测试"
+        android:maxLines="2"
+        android:textSize="22dp"
+        />
+        
+        tagTextView.render();
+```
 
 
 
