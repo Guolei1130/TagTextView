@@ -55,7 +55,6 @@ public class TagTextView extends TextView {
     }
 
     private void readAttribute(AttributeSet attrs){
-        Log.e("tag",attrs +"");
         if (attrs != null){
             TypedArray typedArray = mContext.obtainStyledAttributes(attrs,R.styleable.TagTextView);
             mFlagChar = typedArray.getString(R.styleable.TagTextView_flag_char) == null ? DEFAULT_CHAR
@@ -78,10 +77,8 @@ public class TagTextView extends TextView {
         float hasWidth = getMeasuredWidth() * getMaxLines();
         // 计算Tag开始的位置
         String text = getText().toString();
-        Log.e("tag",text + ";" + mFlagChar);
         mStart = text.lastIndexOf(mFlagChar);
         mEnd = text.length();
-
         if (mStart < 0){
             return;
         }
