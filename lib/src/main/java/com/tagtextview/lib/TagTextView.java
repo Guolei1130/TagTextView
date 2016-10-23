@@ -84,7 +84,7 @@ public class TagTextView extends TextView {
         String text = getText().toString();
         mStart = text.lastIndexOf(mFlagChar);
         mEnd = text.length();
-        if (mStart < 0){
+        if (mStart < 0 || mEnd - mStart < 1){
             return;
         }
         String tagText = text.substring(mStart,mEnd);
@@ -114,9 +114,9 @@ public class TagTextView extends TextView {
             if (getText().toString().contains(mFlagChar)) {
                 BitmapDrawable bitmapDrawable = (BitmapDrawable) DrawableFactory.convertViewToDrawable(tagView);
                 bitmapDrawable.setBounds(UPPER_LEFT_X, UPPER_LEFT_Y, bitmapDrawable.getIntrinsicWidth(), bitmapDrawable.getIntrinsicHeight());
-                spannableString.setSpan(new TagImageSpan(bitmapDrawable), mStart, mStart+2, DEFAULT_RENDER_APPLY_MODE);
+                spannableString.setSpan(new TagImageSpan(bitmapDrawable), mStart, mStart + 1, DEFAULT_RENDER_APPLY_MODE);
             }
-            setText(spannableString.subSequence(0,mStart+2));
+            setText(spannableString.subSequence(0,mStart + 1));
         }
     }
 
