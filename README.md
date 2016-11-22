@@ -1,6 +1,9 @@
 # TagTextView
 TextView with tag
 
+_ _ _
+
+[imagespan 居中的正确办法](http://www.cnblogs.com/withwind318/p/5541267.html)
 ### 0.1 版本
 
 * 基本效果实现
